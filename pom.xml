@@ -43,13 +43,20 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>io.projectreactor</groupId>
-      <artifactId>reactor-test</artifactId>
-      <scope>test</scope>
+      <artifactId>micrometer-core</artifactId>
+      <groupId>io.micrometer</groupId>
     </dependency>
     <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-core</artifactId>
+      <artifactId>okhttp</artifactId>
+      <groupId>com.squareup.okhttp3</groupId>
+      <scope>test</scope>
+      <version>4.1.0</version>
+    </dependency>
+    <dependency>
+      <artifactId>mockwebserver</artifactId>
+      <groupId>com.squareup.okhttp3</groupId>
+      <version>4.0.1</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
