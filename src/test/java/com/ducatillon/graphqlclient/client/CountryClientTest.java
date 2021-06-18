@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 import com.ducatillon.graphqlclient.data.CountryDto;
 import com.ducatillon.graphqlclient.data.CountryDto.CountryData;
 import com.ducatillon.graphqlclient.data.CountryDto.CountryData.Country;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import okhttp3.mockwebserver.MockResponse;
@@ -45,7 +44,7 @@ class CountryClientTest {
   }
 
   @Test
-  void shouldReturnCountryDetails() throws JsonProcessingException, InterruptedException {
+  void shouldReturnCountryDetails() throws IOException, InterruptedException {
 
     Country countryMock = new Country("Belgium", "Brussels", "EUR");
     CountryData countryDataMock = new CountryData(countryMock);

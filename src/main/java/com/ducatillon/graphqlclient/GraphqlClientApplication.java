@@ -2,9 +2,9 @@ package com.ducatillon.graphqlclient;
 
 import com.ducatillon.graphqlclient.client.CountryClient;
 import com.ducatillon.graphqlclient.data.CountryDto;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @Slf4j
 public class GraphqlClientApplication {
 
-  public static void main(String[] args) throws JsonProcessingException {
+  public static void main(String[] args) throws IOException {
 
     ConfigurableApplicationContext context = SpringApplication.run(GraphqlClientApplication.class, args);
     CountryClient client = (CountryClient) context.getBean("countryClient");
